@@ -1,6 +1,5 @@
 import os
 from flask import (Flask, render_template, redirect,url_for,request)
-import pygsheets
 import pandas as pd
 import gspread
 
