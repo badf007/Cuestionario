@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>Encuesta</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="alert alert-dark" role="alert">
+        
+        <div class="col-6">
+          <a class="btn btn-warning" href="{{url_for('index')}}">Atras</a>
+        </div>
+        
+      </div>
+
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Escala de somnolencia de Epworth (ESE)</h4>
+        <hr>
+        <p class="mb-0">Llenar todos los campos antes de completar.</p>
+      </div>
+
+      <form action="{{url_for('store_q1')}}" class="row" method="post">
+
+        <div class="col-6">
+          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+          <input type="text" required class="form-control" id="nombre" name="nombre" placeholder="John Doe">
+        </div>
+
+        <div class="col-3">
+          <label for="exampleFormControlInput1" class="form-label">Edad</label>
+          <input type="number" required class="form-control" id="edad" name="edad" placeholder="18">
+        </div>
+
+        <div class="col-3 ">
+          <label for="exampleFormControlInput1" class="form-label">Sexo</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q0" id="q01" value="M" required>
+            <label class="form-check-label" for="q01">
+              Masculino
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q0" id="q02" value="F" required>
+            <label class="form-check-label" for="q02">
+              Femenino
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="q0" id="q03" value="O" required>
+            <label class="form-check-label" for="q03">
+              Otro
+            </label>
+          </div>
+
+        </div>
+
+        <hr>
+        <div class="alert alert-primary d-flex align-items-center" role="alert">
+          <div>
+            Valore las situaciones asociadas a la somnolencia:
+          </div>
+        </div>
+        <hr>
+
+        <!-- Question 1 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">1) Sentado y leyendo</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q11" value="0" required>
+                <label class="form-check-label" for="q11">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q12" value="1" required>
+                <label class="form-check-label" for="q12">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q13" value="2" required>
+                <label class="form-check-label" for="q13">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q1" id="q14" value="3" required>
+                <label class="form-check-label" for="q14">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">2) Viendo la televisión</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q21"  value="0" required>
+                <label class="form-check-label" for="q21">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q22"  value="1" required>
+                <label class="form-check-label" for="q22">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q23" value="2" required>
+                <label class="form-check-label" for="q23">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q24" value="3" required>
+                <label class="form-check-label" for="q24">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Question 3 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">3) Sentado inactivo en un lugar
+                público</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q31"  value="0" required>
+                <label class="form-check-label" for="q31">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q32" value="1" required>
+                <label class="form-check-label" for="q32">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q33" value="2" required>
+                <label class="form-check-label" for="q33">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q34" value="3" required>
+                <label class="form-check-label" for="q34">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">4) Sentado durante una hora como pasajero en
+                un coche</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q41" value="0" required>
+                <label class="form-check-label" for="q41">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q42" value="1" required>
+                <label class="form-check-label" for="q42">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q43" value="2" required>
+                <label class="form-check-label" for="q43">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q44" value="3" required>
+                <label class="form-check-label" for="q44">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Question 5 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">5) Tumbado por la tarde para
+                descansar</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q51" value="0" required>
+                <label class="form-check-label" for="q51">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q52" value="1" required>
+                <label class="form-check-label" for="q52">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q53" value="2" required>
+                <label class="form-check-label" for="q53">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q54" value="3" required>
+                <label class="form-check-label" for="q54">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Question 6 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">6) Sentado y hablando con otra
+                persona</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q6" id="q61" value="0" required>
+                <label class="form-check-label" for="q61">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q6" id="q62" value="1" required>
+                <label class="form-check-label" for="q62">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q6" id="q63" value="2" required>
+                <label class="form-check-label" for="q63">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q6" id="q64" value="3" required>
+                <label class="form-check-label" for="q64">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">7) Sentado tranquilamente después de una
+                comida (sin consumo de alcohol en la comida)</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q7" id="q71" value="0" required>
+                <label class="form-check-label" for="q71">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q7" id="q72" value="1" required>
+                <label class="form-check-label" for="q72">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q7" id="q73" value="2" required>
+                <label class="form-check-label" for="q73">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q7" id="q74" value="3" required>
+                <label class="form-check-label" for="q74">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- Question 8 -->
+        <div class="card col-6">
+          <div class="card-body">
+
+            <div class="col-12">
+              <label for="exampleFormControlInput1" class="form-label h6">8) Sentado en un coche, detenido durante unos
+                pocos minutos por un atasco</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q8" id="q81" value="0" required>
+                <label class="form-check-label" for="q81">
+                  Sin posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q8" id="q82" value="1" required>
+                <label class="form-check-label" for="q82">
+                  Ligera posibilidad de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q8" id="q83" value="2" required>
+                <label class="form-check-label" for="q83">
+                  Posibilidad moderada de adormecerse
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q8" id="q84" value="3" required>
+                <label class="form-check-label" for="q84">
+                  Posibilidad alta de adormecerse
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <hr>
+
+        <button type="submit" class="btn btn-primary">Completar</button>
+
+        <hr>
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
