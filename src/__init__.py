@@ -49,7 +49,7 @@ def create_app(test_config=None):
 
     #authorization
     #gc = pygsheets.authorize(service_file='src\cuestionario-418210-94eee3a815de.json')
-    gc = gspread.service_account('/etc/secrets/connect')
+    gc = gspread.service_account('/etc/secrets/connect.json')
     
     
     @app.route('/store_q1', methods=['POST'])
