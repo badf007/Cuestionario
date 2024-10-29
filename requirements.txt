@@ -2,5 +2,5 @@
 Flask==2.2.2
 pandas==1.5.2
 gspread
-Gunicorn
+Gunicorn==21.2.0
 Werkzeug==2.2.2
