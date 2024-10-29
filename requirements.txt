@@ -4,3 +4,4 @@ pandas==1.5.2
 gspread
 Gunicorn==21.2.0
 Werkzeug==2.2.2
+numpy==1.26.4
